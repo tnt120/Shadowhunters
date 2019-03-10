@@ -3,12 +3,8 @@
     src: url("FONTY/Oswald-Regular.ttf");
 }
 
-:root{
-    --nav-bg:rgba(9, 132, 227,1);
-}
-
 header{
-    background:var(--nav-bg);
+    background: #0984E3;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -86,7 +82,7 @@ nav{
     text-align: left;
     top: 100%;
     left: 0%;
-    background: var(--nav-bg);
+    background: #0984E3;
     width: 100%;
     transform: scale(1,0);
     transform-origin: top;
@@ -254,7 +250,7 @@ nav a:hover{
         top: 100%;
         left: 0%;
         height: calc(100vh - 50px);
-        background: var(--nav-bg);
+        background: #0984E3;
         width: 100%;
         transform: scale(1,0);
         transform-origin: top;
