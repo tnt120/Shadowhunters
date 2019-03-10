@@ -1,0 +1,196 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'IndieFlower';
+    src: url("FONTY/IndieFlower.ttf");
+}
+
+@font-face{
+    font-family: ('RobotoCondensed');
+    src: url("FONTY/RobotoCondensed-Regular.ttf");
+}
+
+@font-face{
+    font-family: 'JosefinSans';
+    src: url("FONTY/JosefinSans-Regular.ttf");
+}
+
+body{
+    
+}
+
+@media screen and (min-width: 1025px){
+    
+    main #home h1{
+        top: 25%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        font-size: 250%;
+    }
+    
+    main #home h1 span::after{
+        content: '\A';
+        white-space: pre;
+    }
+    
+    #home h2{
+        font-size: 700%;
+        top: 25%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #content h2{
+        font-size: 300%;
+    }
+    
+    #content h3{
+        font-size: 300%;
+    }
+    
+    .hometekst{
+        font-size: 110%;
+    }
+    
+    .jpghome{
+        width: 70vh;
+    }
+    
+    audio{
+        padding-bottom: 2vh;
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+    
+}
+
+
+@media screen and (max-width: 1024px){
+    main #home h1{
+        top: 85%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        width: 55%;
+    }
+    
+    #home h2{
+        font-size: 260%;
+        top: 80%;
+        left: 72.5%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #content h2{
+        font-size: 180%;
+    }
+    
+    #content h3{
+        font-size: 180%;
+    }
+    
+    .hometekst{
+        font-size: 70%;
+    }
+    
+    .jpghome{
+        width: 45vh;
+    }
+    
+    audio{
+        display: none;
+    }
+}
+
+
+main #home{
+    background: url("IMG/stronaglowna.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%; 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+#home h1{
+    position: absolute;
+    color: white;
+    font-family: 'IndieFlower';
+    font-style: italic;
+}
+
+#home h2{
+    position: absolute;
+    color: white;
+    font-family: 'JosefinSans', sans-serif;
+    text-shadow: 10px 10px 50px black;
+}
+
+main #content{
+    z-index: 2;
+    background-color: #2c3e50; 
+    margin-top: 100vh;
+    padding-top: 50px; 
+    position: relative;
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.homejpg{
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+}
+
+.jpghome{
+    height: auto;
+    border-radius: 15px;
+}
+
+#content h2{
+    color: #e74c3c;
+    padding-top: 4vh;
+    font-family: 'JosefinSans', sans-serif;
+    font-style: italic;
+    text-shadow: 10px 10px 50px black;
+    text-align: center;
+}
+
+#content h3{
+    color: #e74c3c;
+    padding-top: 5vh;
+    font-family: 'JosefinSans', sans-serif;
+    font-style: italic;
+    text-shadow: 10px 10px 50px black;
+    text-align: center;
+}
+
+#content p{
+    color: white;
+    font-family: 'RobotoCondensed', sans-serif;
+    padding-top: 5vh;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+footer{
+    background-color: black;
+    z-index: 99;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+}

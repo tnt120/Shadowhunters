@@ -1,0 +1,94 @@
+@media screen and (min-width: 1025px){
+    
+    p{
+        font-size: 110%;
+    }
+    
+    #content figure img{
+        width: 250px;
+        height: 320px;
+        margin: 20px; 
+    }
+}
+
+@media screen and (max-width: 1024px){
+    
+    #content figure img{
+        width: 130px;
+        height: 20vh;
+        margin: 20px; 
+    }
+    
+    #content p{
+        font-size: 80%;
+    }
+    
+    figcaption{
+        font-size: 87%;
+    }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1300px){
+    #content figure img{
+        width: 220px;
+        height: 260px;
+        margin: 15px; 
+    }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1250px){
+    #content figure img{
+        width: 200px;
+        height: 240px;
+        margin: 15px; 
+    }
+}
+
+@media screen and (max-width: 374px){
+    
+    
+    #content figure img{
+        width: 113px;
+        height: 25vh;
+        margin: 10px; 
+    }
+    
+    figcaption{
+        font-size: 67%;
+    }
+}
+
+.gallery{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+main #content{
+    height: auto;
+}
+
+img{
+    border-radius: 15px;
+}
+
+figcaption{
+    color: white;
+    font-family: 'JosefinSans', sans-serif;
+    font-style: italic;
+
+}
+
+figure:hover img{
+    position: relative;
+    z-index: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.5s all;
+}

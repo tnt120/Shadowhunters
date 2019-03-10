@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+   
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="Author" content="Artur Pajor"/>
+        <title>Shadowhunters</title>
+        <link rel="stylesheet" href="STYLE/style.css"/>
+        <link rel="stylesheet" href="STYLE/menu.css"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <link rel="icon" href="IMG/favicon.ico"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <span class="logo">
+                <a href="index.html"><img src="IMG/logo.png" alt="logo"/></a>
+            </span>
+            <input type="checkbox" id="nav-btn" class="nav-btn"/>
+            <nav>
+                <ul>
+                    <li><a href="index.html" onclick='unChecked()'>Home</a></li>
+                    <li><a href="obsada.html" onclick='unChecked()'>Obsada</a></li>
+                    <li><a href="runy.html" onclick='unChecked()'>Runy</a></li>
+                    <li><a href="galeria.html" onclick='unChecked()'>Galeria</a></li>
+                </ul>
+
+            </nav>
+            <label for="nav-btn" class="nav-btn-label">
+                <span>
+                
+                </span>
+            </label>
+        </header>      
+        
+        <main>
+            <section id="home">
+                <h1><span>Tutaj będzie bardzo super</span> <span>megaa piękny i najlepszy</span> cytat na świecie elo.</h1>                 
+            </section>
+            
+            <section id="content">
+                <h2>SHADOWHUNTERS</h2>
+                <p class="hometekst">
+                    Jest to amerykański serial fantasy wyprodukowany przez Constantin Film oraz Wonderland Sound and Vision, który jest adaptacją książek "Dary Anioła" autorstwa Cassandry Clare.
+                    Producentami wykonawczymi są Ed Decter oraz McG. Serial jest emitowany od 12 stycznia 2016 roku przez Freeform. Możemy oglądać go również na platformie Netflix.
+                    Aktualnie co tydzień pojawiają się odcinki ostatniego sezonu 3b, składającego się z 12 odcinków.
+                </p>
+                <h3>Fabuła</h3>
+                <p class="hometekst">
+                    Clary Fray właśnie dostała się do akademii Sztuki na Brooklynie. Wydawałoby się, że jest zwyczajną nastolatką, prowadzącą normalne życie. Jednak wszystko się zmienia w jej osiemnaste urodziny. Dziewczyna niespodziewanie odkrywa, że jest Nocnym Łowcą - hybrydą anioła i człowieka, której zadaniem jest ochrona ludzkości przed demonami. Kiedy w nieznanych okolicznościach jej matka, Jocelyn Fray, zostaje porwana przez grupę o nazwie ,,Krąg" dowodzoną przez jej byłego męża Valentine'a Morgensterna, Clary wraz z nowo poznaną drużyną Nocnych Łowców rusza jej na pomoc. Dziewczyna wkracza w świat z tajemniczym Jacem, Alekiem, Isabelle oraz lojalnym przyjacielem Simonem. Od teraz wkracza w świat czarowników, wampirów oraz wilkołaków. Wszystkie legendy są prawdziwe. Clary rozpoczyna niezwykłą podróż, podczas której dowie się więcej o przeszłości oraz o tym, co przyniesie przyszłość.
+                </p>
+                <figure class="homejpg"><img src="IMG/home.jpg" alt="home" class="jpghome"/></figure>
+                <audio controls>
+                    <source src="Audio/Audio.mp3" type='audio/mpeg'>
+                </audio>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Copyright <span id="copy">&copy;</span> 2019, Artur Pajor, 2f</p>
+        </footer>
+        
+<script>
+    
+    const navBtn = document.getElementById("nav-btn");
+    
+    function unChecked(){
+        if(navBtn.checked==true)
+        navBtn.checked = false;
+    }
+    
+    $(document).ready(function()
+                              {
+        
+        $(document).scroll(function()
+        {
+            var scrollval = $(document).scrollTop()/100;
+            var $scrollValue = 1 - $(document).scrollTop()/500;
+            $('.home-box').css('opacity', $scrollValue);
+            
+        });
+
+        $('')
+        
+    });
+    
+</script>
+    </body>
+
+</html>

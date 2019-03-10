@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+   
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="Author" content="Artur Pajor"/>
+        <title>Shadowhunters</title>
+        <link rel="stylesheet" href="STYLE/style.css"/>
+        <link rel="stylesheet" href="STYLE/menu.css"/>
+        <link rel="stylesheet" href="STYLE/obsada.css"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <link rel="icon" href="IMG/favicon.ico"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <span class="logo">
+                <a href="index.html"><img src="IMG/logo.png" alt="logo"/></a>
+            </span>
+            <input type="checkbox" id="nav-btn" class="nav-btn"/>
+            <nav>
+                <ul>
+                    <li><a href="index.html" onclick='unChecked()'>Home</a></li>
+                    <li><a href="obsada.html" onclick='unChecked()'>Obsada</a></li>
+                    <li><a href="runy.html" onclick='unChecked()'>Runy</a></li>
+                    <li><a href="galeria.html" onclick='unChecked()'>Galeria</a></li>
+                </ul>
+
+            </nav>
+            <label for="nav-btn" class="nav-btn-label">
+                <span>
+                
+                </span>
+            </label>
+        </header>      
+        
+        <main>
+            <section id="home">
+                <h2>OBSADA</h2>
+            </section>
+            
+            <section id="content">
+                <div class="gallery">
+                    <figure><img src="IMG/clary.jpg" alt="Clary"/><figcaption>Clary Fray - Katherine McNamara</figcaption></figure>
+                    <figure><img src="IMG/issabelle.jpg" alt="Issabelle"/><figcaption>Isabelle Lighwood - Emeraude Toubia</figcaption></figure>
+                    <figure><img src="IMG/alec.jpg" alt="Alec"/><figcaption>Alec Lightwood - Matthew Daddario</figcaption></figure>
+                    <figure><img src="IMG/magnus.jpg" alt="Magnus"/><figcaption>Magnus Bane - Harry Shum Jr.</figcaption></figure>
+                    <figure><img src="IMG/simon.jpg" alt="Simon"/><figcaption>Simon Lewis - Alberto Rosende</figcaption></figure>
+                    <figure><img src="IMG/luke.jpg" alt="Luke"/><figcaption>Luke Garroway - Isaiah Mustafa</figcaption></figure>
+                    <figure><img src="IMG/jace.jpg" alt="Jace"/><figcaption>Jace Wayland - Dominic Sherwood</figcaption></figure>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Copyright <span id="copy">&copy;</span> 2019, Artur Pajor, 2f</p>
+        </footer>
+        
+<script>
+    
+    const navBtn = document.getElementById("nav-btn");
+    
+    function unChecked(){
+        if(navBtn.checked==true)
+        navBtn.checked = false;
+    }
+    
+    $(document).ready(function()
+                              {
+        
+        $(document).scroll(function()
+        {
+            var scrollval = $(document).scrollTop()/100;
+            var $scrollValue = 1 - $(document).scrollTop()/500;
+            $('.home-box').css('opacity', $scrollValue);
+            
+        });
+
+        $('')
+        
+    });
+    
+</script>
+    </body>
+
+</html>

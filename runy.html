@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+   
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="Author" content="Artur Pajor"/>
+        <title>Shadowhunters</title>
+        <link rel="stylesheet" href="STYLE/style.css"/>
+        <link rel="stylesheet" href="STYLE/menu.css"/>
+        <link rel="stylesheet" href="STYLE/runy.css"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <link rel="icon" href="IMG/favicon.ico"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <span class="logo">
+                <a href="index.html"><img src="IMG/logo.png" alt="logo"/></a>
+            </span>
+            <input type="checkbox" id="nav-btn" class="nav-btn"/>
+            <nav>
+                <ul>
+                    <li><a href="index.html" onclick='unChecked()'>Home</a></li>
+                    <li><a href="obsada.html" onclick='unChecked()'>Obsada</a></li>
+                    <li><a href="runy.html" onclick='unChecked()'>Runy</a></li>
+                    <li><a href="galeria.html" onclick='unChecked()'>Galeria</a></li>
+                </ul>
+
+            </nav>
+            <label for="nav-btn" class="nav-btn-label">
+                <span>
+                
+                </span>
+            </label>
+        </header>      
+        
+        <main>
+            <section id="home">
+                <h2>RUNY</h2>
+            </section>
+            
+            <section id="content">
+                <h2>Runy oraz Szara Księga</h2>
+                <p>
+                    Runy są starożytnymi znakami, które Nocni Łowcy wypalają sobie na skórze za pomocą Steli, ponieważ dzięki nim zyskują oni niezwykłą moc.
+                    Umiejscownienie na ciele ma wpływ na skuteczność runy - im bliżej serca, tym potężniejszy się staje. Niektórzy Nocni Łowcy np. małżonkowie
+                    czy parabatai noszą stałe runy.
+                    Wszystkie runy znajdują się w Szarej Księdze, dawniej zwaną Księgą Magii. Runy zostały umieszczone tam przez Anioła Razjela.
+                    Istnieje tylko kilka egzemplarzy, Magnus Bane oraz każdy z Instytutów posiada własny egzemplarz.
+                </p>
+                <div class="gallery">
+                    <figure><img src="IMG/runa1.jpg" alt="runa1"/><figcaption>Zapewnia piecze Anioła Razjzela.</figcaption></figure>
+                    <figure><img src="IMG/runa2.jpg" alt="runa2"/><figcaption>Zwiększa prędkość.</figcaption></figure>
+                    <figure><img src="IMG/runa3.jpg" alt="runa3"/><figcaption>Pomaga w blokowaniu ciosów.</figcaption></figure>
+                    <figure><img src="IMG/runa4.jpg" alt="runa4"/><figcaption>Zapewnia odwagę.</figcaption></figure>
+                    <figure><img src="IMG/runa5.jpg" alt="runa5"/><figcaption>Zapewnia bezdźwięczność.</figcaption></figure>
+                    <figure><img src="IMG/runa6.jpg" alt="runa6"/><figcaption>Runa równowagi.</figcaption></figure>
+                    <figure><img src="IMG/runa7.jpg" alt="runa7"/><figcaption>Runa lecznicza.</figcaption></figure>
+                    <figure><img src="IMG/runa8.jpg" alt="runa8"/><figcaption>Zapewnia lepszą walkę.</figcaption></figure>
+                    <figure><img src="IMG/runa9.jpg" alt="runa9"/><figcaption>Zapewnia brak strach.</figcaption></figure>
+                    <figure><img src="IMG/runa10.jpg" alt="runa10"/><figcaption>Runa siły</figcaption></figure>
+                    <figure><img src="IMG/runa11.jpg" alt="runa11"/><figcaption>Runa parabatai.</figcaption></figure>
+                    <figure><img src="IMG/runa12.jpg" alt="runa12"/><figcaption>Runa zwinności.</figcaption></figure>
+                    <figure><img src="IMG/runa13.jpg" alt="runa13"/><figcaption>Runa wzroku.</figcaption></figure>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Copyright <span id="copy">&copy;</span> 2019, Artur Pajor, 2f</p>
+        </footer>
+        
+<script>
+    
+    const navBtn = document.getElementById("nav-btn");
+    
+    function unChecked(){
+        if(navBtn.checked==true)
+        navBtn.checked = false;
+    }
+    
+    $(document).ready(function()
+                              {
+        
+        $(document).scroll(function()
+        {
+            var scrollval = $(document).scrollTop()/100;
+            var $scrollValue = 1 - $(document).scrollTop()/500;
+            $('.home-box').css('opacity', $scrollValue);
+            
+        });
+
+        $('')
+        
+    });
+    
+</script>
+    </body>
+
+</html>

@@ -1,0 +1,76 @@
+@font-face{
+    font-family: 'JosefinSans';
+    src: url("FONTY/JosefinSans-Regular.ttf");
+}
+
+main #content{
+    height: auto;
+}
+
+.gallery{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+img{
+    border-radius: 15px;
+}
+
+figcaption{
+    color: white;
+    font-family: 'JosefinSans', sans-serif;
+    font-style: italic;
+    visibility: hidden;
+}
+
+figure:hover figcaption{
+    visibility: visible;
+}
+
+figure:hover{
+    cursor: pointer;
+}
+
+figure:hover img{
+    position: relative;
+    z-index: 1;
+    transform: scale(1.025);
+    transition: 0.5s all;
+}
+
+@media screen and (min-width: 1025px){
+    
+    #content figure img{
+        width: 350px;
+        height: 490px;
+        margin: 20px; 
+    }
+    
+}
+
+@media screen and (max-width: 1500px){
+    #content figure img{
+        width: 290px;
+        height: 400px;
+        margin: 10px; 
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    
+   #content figure img{
+        width: 53%;
+        height: 40vh;
+        margin: 10px; 
+    }
+    
+    figcaption{
+        font-size: 70%;
+    }
+}
